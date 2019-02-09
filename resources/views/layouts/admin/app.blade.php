@@ -51,11 +51,11 @@
     <!-- Main content -->
     <section class="content">
 
-    @yield('content')
+    <!-- @yield('content') -->
+    <adminhome></adminhome>
     
     </section>
     <!-- /.content -->
-    
   </div>
   <!-- /.content-wrapper -->
 

@@ -1,3 +1,8 @@
+
+import adminhome from './components/admin/AdminHome.vue'
 export const routes = [
-//   { path: '/bar', component: Bar }
+    {
+        path: '/admin/home',
+        components: adminhome
+    }
 ]

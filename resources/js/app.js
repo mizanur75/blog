@@ -11,11 +11,13 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-
+import {routes} from './routes';
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('adminmaster', require('./components/admin/AdminMaster.vue').default);
+Vue.component('adminhome', require('./components/admin/AdminHome.vue').default);
 
-import {routes} from './routes';
+
 
 const router = new VueRouter({
   routes, // short for `routes: routes`
