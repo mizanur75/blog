@@ -27,7 +27,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <div class="dropdown-divider"></div>
-        <a href="{{url('show-profile')}}" class="dropdown-item">
+        <a href="{{route('show-profile')}}" class="dropdown-item">
             <i class="fa fa-user mr-2"></i> Profile
         </a>
         <div class="dropdown-divider"></div>

@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "admin-lte": "^3.0.0-alpha.2",
-        "vali-admin": "^2.4.1"
+        "vali-admin": "^2.4.1",
+        "vue-router": "^3.0.2"
     }
 }

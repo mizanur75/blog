@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
+Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>'auth'], function(){
     Route::get('home', 'HomeController@index')->name('home');
     Route::get('show-profile', 'HomeController@show')->name('show-profile');
-    Route::resource('post', 'PostController@index');
+    Route::resource('post', 'PostController');
 });
