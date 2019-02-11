@@ -1,6 +1,6 @@
 <template>
-    <div id="adminmain">
-        <router-view></router-view>
+    <div>
+        <h1>This is Profile</h1>
     </div>
 </template>
 

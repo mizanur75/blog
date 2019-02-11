@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Post;
+use App\Category;
 
 class PostController extends Controller
 {
@@ -16,9 +17,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
+        $category = Category::with('posts')->paginate(10);
 
-        return $post;
+        return $category;
 
     }
 

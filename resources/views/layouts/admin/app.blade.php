@@ -51,8 +51,7 @@
     <!-- Main content -->
     <section class="content">
 
-    <!-- @yield('content') -->
-    <adminhome></adminhome>
+    @yield('content')
     
     </section>
     <!-- /.content -->

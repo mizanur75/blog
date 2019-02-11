@@ -12,7 +12,7 @@
           <img src="{{asset('images/admin/default/admin.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{Auth::user()->name}}</a>
+          <router-link to="/admin/show-profile" class="d-block">{{Auth::user()->name}}</router-link>
         </div>
       </div>
 
@@ -22,12 +22,12 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <router-link to="/admin/home" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Dashboard
               </p>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -56,10 +56,10 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../charts/chartjs.html" class="nav-link">
+                <router-link to="/admin/post" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>ChartJS</p>
-                </a>
+                  <p>All Post</p>
+                </router-link>
               </li>
             </ul>
           </li>

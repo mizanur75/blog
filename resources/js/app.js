@@ -13,9 +13,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 import {routes} from './routes';
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('adminmaster', require('./components/admin/AdminMaster.vue').default);
-Vue.component('adminhome', require('./components/admin/AdminHome.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('admin-master', require('./components/admin/AdminMaster.vue').default);
 
 
 
