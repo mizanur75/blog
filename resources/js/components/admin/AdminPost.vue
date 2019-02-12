@@ -12,30 +12,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
+                <tr v-for="post in posts" :key="post.id">
+                    <td>{{post.id}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.description}}</td>
+                    <td>{{post.created_at}}</td>
                 </tr>
-                <tr>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                </tr>
-                <tr>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                </tr>
-                <tr>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                    <td>kk</td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
@@ -45,7 +28,30 @@
 
 <script>
 export default {
+    data(){
 
+        return {
+            posts: []
+        }
+
+    },
+    mounted() {
+        // console.log('Component mounted.')
+        this.allPosts()
+    },
+
+    methods: {
+        allPosts () {
+            // console.log('Ok');
+            axios.get('/admin/post')
+            .then( response => {
+                this.posts = response.data.data
+            })
+            .catch( e => {
+                console.log(e);
+            });
+        }
+    }
 }
 </script>
 

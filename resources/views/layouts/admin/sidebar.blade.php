@@ -39,10 +39,10 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../charts/chartjs.html" class="nav-link">
+                <router-link to="/admin/all-category" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>ChartJS</p>
-                </a>
+                  <p>All Category</p>
+                </router-link>
               </li>
             </ul>
           </li>

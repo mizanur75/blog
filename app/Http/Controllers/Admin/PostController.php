@@ -17,9 +17,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $category = Category::with('posts')->paginate(10);
-
-        return $category;
+        $posts = Post::paginate(10);
+        return $posts;
 
     }
 
