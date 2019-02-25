@@ -46,6 +46,7 @@ export default {
 
     mounted(){
         this.allCategory()
+        this.$snotify.success("Success")
     },
 
     methods:{
@@ -53,7 +54,11 @@ export default {
         allCategory () {
             axios.get('/admin/all-category')
             .then( response => {
+                
                 this.categories = response.data.data
+                if(this.form.success){
+                    this.$snotify.success("Success")
+                }
             })
             .catch( e => {
                 console.log(e)

@@ -10,11 +10,16 @@ use App\Category;
 class CategoryController extends Controller
 {
     public function index(){
-        $categories = Category::paginate(10);
+        $categories = Category::orderBy('id','DESC')->paginate(10);
         return $categories;
     }
 
     public function addCategory(Request $request){
-        return $request;
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+        $category = new Category();
+        $category->name = $request->name;
+        $category->save();
     }
 }

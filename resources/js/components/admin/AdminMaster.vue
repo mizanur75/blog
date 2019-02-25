@@ -1,6 +1,7 @@
 <template>
     <div id="adminmain">
         <router-view></router-view>
+        <vue-snotify></vue-snotify>
     </div>
 </template>
 
